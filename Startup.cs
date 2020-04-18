@@ -25,6 +25,8 @@ namespace EmailSender
             services.AddTransient<IEmailService, SMTPEmailService>();
 
             services.AddTransient<IEmailBuilder, EmailBuilder>();
+
+            services.AddTransient<IRecaptchaService, RecaptchaService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -40,6 +42,8 @@ namespace EmailSender
             else
             {
                 app.UseCustomCors();
+
+                app.UseRecaptchaService();
             }
 
             app.UseHttpsRedirection();
