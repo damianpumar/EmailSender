@@ -1,1 +1,4 @@
-publish
+publish/
+bin/
+obj/
+.vs/
