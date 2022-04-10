@@ -23,9 +23,9 @@ namespace EmailSender.Models
                                               .Replace("#NAME#", mail.Name)
                                               .Replace("#EMAIL#", mail.Email)
                                               .Replace("#MESSAGE#", mail.Message)
-                                              .ReplaceIfNotEmpty("#SURNAME", mail.Surname)
-                                              .ReplaceIfNotEmpty("#PHONE", mail.Phone)
-                                              .ReplaceIfNotEmpty("#COMPANY", mail.Company)
+                                              .ReplaceIfNotEmpty("#SURNAME#", mail.Surname)
+                                              .ReplaceIfNotEmpty("#PHONE#", mail.Phone)
+                                              .ReplaceIfNotEmpty("#COMPANY#", mail.Company)
                                               .Replace("#DATE#", DateTime.Now.ToLongDateString());
 
 

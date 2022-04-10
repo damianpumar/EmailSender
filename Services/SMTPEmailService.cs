@@ -1,10 +1,8 @@
-using System.Threading.Tasks;
-using EmailSender.Models;
-using Microsoft.Extensions.Configuration;
+using System;
 using System.Net;
 using System.Net.Mail;
-using System.IO;
-using System;
+using System.Threading.Tasks;
+using EmailSender.Models;
 
 namespace EmailSender.Services
 {
